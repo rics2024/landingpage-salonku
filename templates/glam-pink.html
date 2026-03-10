@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glam Pink Theme - Beauty Salon</title>
+    <meta name="description" content="Glam pink luxury beauty salon landing page.">
+    <meta name="keywords" content="glam salon, pink beauty, luxury hair salon">
+    <link rel="canonical" href="https://salonwebpro.example.com/glam-pink.html">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Glam Pink - Demo Salon Web Pro">
+    <meta property="og:description" content="Luxury bold pink theme for beauty salons.">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1200&h=630&auto=format&fit=crop">
+    <meta property="og:url" content="https://salonwebpro.example.com/glam-pink.html">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Styles & Icons -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- JSON-LD LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BeautySalon",
+      "name": "Athaya Glamour",
+      "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e",
+      "telephone": "08128341650",
+      "priceRange": "$$$"
+    }
+    </script>
+
+    <style>
+        @media (min-width: 1024px) {
+            .services-one-row {
+                grid-template-columns: repeat(4, 1fr) !important;
+            }
+        }
+
+        /* Custom Glam Pink Intro */
+        .glam-about {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .glam-about-img {
+            flex: 1;
+            position: relative;
+        }
+
+        .glam-about-img img {
+            border-radius: 200px 200px 20px 20px;
+            width: 100%;
+            border: 8px solid var(--white);
+            box-shadow: 0 20px 40px rgba(212, 26, 92, 0.2);
+        }
+
+        .glam-about-text {
+            flex: 1;
+            text-align: left;
+        }
+
+        /* Glam Gallery - Insta Style */
+        .glam-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 3rem;
+        }
+
+        .glam-gallery img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            transition: all 0.5s ease;
+            filter: grayscale(20%);
+        }
+
+        .glam-gallery img:hover {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+            border-radius: 15px;
+            box-shadow: var(--shadow-lg);
+            z-index: 2;
+        }
+
+        /* Footer Glam */
+        .footer-glam {
+            background: linear-gradient(135deg, var(--darker), #2d0b1a);
+            color: #fdf2f5;
+            padding: 5rem 2rem 2rem;
+            text-align: center;
+            border-top: 5px solid var(--secondary);
+        }
+
+        .footer-glam-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+
+        @media(max-width: 768px) {
+            .glam-about {
+                flex-direction: column;
+            }
+
+            .glam-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-glam-inner {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="theme-glam-pink">
+
+    <div class="demo-return-bar">
+        <span><i class="fas fa-eye"></i> Anda sedang melihat demo tema <strong>Glam Pink</strong></span>
+        <a href="index.html"><i class="fas fa-arrow-left"></i> Kembali ke Beranda</a>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" style="top: 40px !important; background: rgba(253, 242, 245, 0.95);">
+        <a href="#" class="nav-logo" style="color: var(--primary);">
+            Athaya Glamour
+        </a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Studio</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#booking">Booking</a></li>
+        </ul>
+        <div class="nav-actions">
+            <i class="fas fa-bars hamburger"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero"
+        style="background: radial-gradient(circle at 70% 50%, rgba(212, 26, 92, 0.1) 0%, transparent 50%), url('https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat; position: relative;">
+        <!-- Overlay -->
+        <div style="position:absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.6);"></div>
+
+        <div class="hero-content reveal"
+            style="position:relative; z-index: 2; text-align: left; max-width: 600px; margin: 0;">
+            <h1 class="hero-title" style="color: white; font-size: 4rem;">Unleash Your <br><span
+                    style="color: var(--secondary); background:none;-webkit-text-fill-color:var(--secondary);">Inner
+                    Glamour.</span></h1>
+            <p class="hero-subtitle" style="color: #eee; margin-left: 0;">Hair, Makeup, and Nails studio for the modern,
+                bold, and fabulous you.</p>
+            <div class="hero-cta" style="justify-content: flex-start;">
+                <a href="#booking" class="btn btn-primary" style="background: var(--primary); padding: 1rem 2rem;">Book
+                    Appointment</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promo Section -->
+    <section class="container" style="padding-top: 3rem; padding-bottom: 2rem;">
+        <div class="reveal"
+            style="background: linear-gradient(135deg, var(--primary), var(--primary-dark)); border-radius: 20px; padding: 3rem 2rem; text-align: center; color: white; box-shadow: 0 15px 30px rgba(212, 26, 92, 0.3); border: 2px solid var(--secondary);">
+            <div
+                style="display: inline-block; background: var(--secondary); color: var(--darker); padding: 0.3rem 1rem; border-radius: 50px; font-size: 0.85rem; font-weight: bold; margin-bottom: 1rem; letter-spacing: 2px; text-transform: uppercase;">
+                Limited Offer</div>
+            <h2
+                style="margin-bottom: 1rem; font-size: 2.5rem; font-family: var(--font-heading); text-transform: uppercase; color: white;">
+                Glamour Makeover</h2>
+            <p
+                style="margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; font-size: 1.1rem; color: #fdf2f5;">
+                Full Hair Coloring + Styling + Premium Lash Extension. <br>Be the center of attention with our
+                <strong>30% OFF</strong> special deal!</p>
+            <a href="#booking" class="btn"
+                style="background: var(--white); color: var(--primary); padding: 0.8rem 2rem; border-radius: 50px; font-weight: bold; box-shadow: none;">Unlock
+                Deal</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container" style="padding-bottom: 0;">
+        <div class="glam-about">
+            <div class="reveal glam-about-img">
+                <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=800&auto=format&fit=crop"
+                    alt="Athaya Beauty Studio">
+            </div>
+            <div class="reveal glam-about-text" style="transition-delay: 0.2s;">
+                <h2 class="section-title" style="text-align: left; margin-bottom: 1.5rem; color: var(--primary);">The
+                    Athaya Experience</h2>
+                <p style="color: var(--text-main); font-size: 1.1rem; line-height: 1.8;">Welcome to Athaya Glamour, the
+                    ultimate destination for modern, bold, and luxurious beauty transformations. Our premium beauty
+                    lounge curates an experience that lets your inner glamour shine bright.</p>
+                <p style="color: var(--text-main); font-size: 1.1rem; line-height: 1.8; margin-top: 1rem;">Let our
+                    expert stylists and makeup artists pamper you into perfection with high-end products and exceptional
+                    service tailored to make you feel extraordinary.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="container text-center">
+        <h2 class="section-title reveal">Luxury Services</h2>
+        <div class="features-grid services-one-row">
+            <div class="feature-card reveal" style="background: var(--white); border-top: 4px solid var(--primary);">
+                <div class="feature-icon" style="color: var(--primary); background: rgba(212, 26, 92, 0.1);"><i
+                        class="fas fa-cut"></i></div>
+                <h3>Hair Styling & Color</h3>
+                <p>Balayage, ombre, and premium haircuts styling to perfection.</p>
+            </div>
+            <div class="feature-card reveal"
+                style="background: var(--white); border-top: 4px solid var(--primary); transition-delay: 0.1s">
+                <div class="feature-icon" style="color: var(--primary); background: rgba(212, 26, 92, 0.1);"><i
+                        class="fas fa-paint-brush"></i></div>
+                <h3>Flawless Makeup</h3>
+                <p>Event makeup, wedding bash, and party glamour looks.</p>
+            </div>
+            <div class="feature-card reveal"
+                style="background: var(--white); border-top: 4px solid var(--primary); transition-delay: 0.2s">
+                <div class="feature-icon" style="color: var(--primary); background: rgba(212, 26, 92, 0.1);"><i
+                        class="fas fa-hand-sparkles"></i></div>
+                <h3>Nail Art</h3>
+                <p>Gel polish, acrylics, and custom luxury nail designs.</p>
+            </div>
+            <div class="feature-card reveal"
+                style="background: var(--white); border-top: 4px solid var(--primary); transition-delay: 0.3s">
+                <div class="feature-icon" style="color: var(--primary); background: rgba(212, 26, 92, 0.1);"><i
+                        class="fas fa-eye"></i></div>
+                <h3>Lash Extension</h3>
+                <p>Premium eyelash extensions for a dramatic and gorgeous look.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" style="background: rgba(212, 26, 92, 0.03);">
+        <div class="container text-center">
+            <h2 class="section-title reveal">Our Studio</h2>
+            <div class="glam-gallery reveal">
+                <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=600&auto=format&fit=crop"
+                    alt="Nails">
+                <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=600&auto=format&fit=crop"
+                    alt="Hair" style="transition-delay: 0.1s">
+                <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=600&auto=format&fit=crop"
+                    alt="Makeup" style="transition-delay: 0.2s">
+                <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=600&auto=format&fit=crop"
+                    alt="Studio Setup" style="transition-delay: 0.3s">
+                <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=600&auto=format&fit=crop"
+                    alt="Glamour Hair" style="transition-delay: 0.4s">
+                <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=600&auto=format&fit=crop"
+                    alt="Beauty Tools" style="transition-delay: 0.5s">
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="container">
+        <h2 class="section-title reveal">VIP Clients</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card reveal"
+                style="background: rgba(212, 26, 92, 0.05); border: 1px solid var(--primary-light);">
+                <i class="fas fa-quote-right quote-icon" style="color: var(--primary);"></i>
+                <div class="stars" style="color:var(--secondary);">★★★★★</div>
+                <p class="testimonial-text">"Always feel like a million bucks after stepping out of Athaya. Best
+                    balayage in town!"</p>
+                <div class="client-info">
+                    <div class="client-avatar" style="background: var(--primary); color: white;">N</div>
+                    <div><strong>Natasha</strong></div>
+                </div>
+            </div>
+            <div class="testimonial-card reveal"
+                style="background: rgba(212, 26, 92, 0.05); border: 1px solid var(--primary-light); transition-delay: 0.1s">
+                <i class="fas fa-quote-right quote-icon" style="color: var(--primary);"></i>
+                <div class="stars" style="color:var(--secondary);">★★★★★</div>
+                <p class="testimonial-text">"The glamour and service are top notch. Worth every penny."</p>
+                <div class="client-info">
+                    <div class="client-avatar" style="background: var(--primary); color: white;">C</div>
+                    <div><strong>Chloe</strong></div>
+                </div>
+            </div>
+            <div class="testimonial-card reveal"
+                style="background: rgba(212, 26, 92, 0.05); border: 1px solid var(--primary-light); transition-delay: 0.2s">
+                <i class="fas fa-quote-right quote-icon" style="color: var(--primary);"></i>
+                <div class="stars" style="color:var(--secondary);">★★★★★</div>
+                <p class="testimonial-text">"Absolutely love my new lash extensions and hair color! Outstanding studio."
+                </p>
+                <div class="client-info">
+                    <div class="client-avatar" style="background: var(--primary); color: white;">J</div>
+                    <div><strong>Jessica</strong></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="container">
+        <div
+            style="background-color: var(--white); border-radius: 30px; padding: 4rem 2rem; box-shadow: var(--shadow-sm); border-top: 5px solid var(--primary);">
+            <h2 class="section-title reveal">Book an Appointment</h2>
+            <p class="section-subtitle reveal" style="margin-bottom: 2rem;">Reserve your luxury transformation schedule
+                today.
+            </p>
+
+            <div class="reveal"
+                style="max-width: 600px; margin: 0 auto; background: var(--light); padding: 2.5rem; border-radius: 20px;">
+                <form id="booking-form" style="display: flex; flex-direction: column; gap: 1.5rem; text-align: left;">
+                    <div>
+                        <label style="font-weight: 600; display: block; margin-bottom: 0.5rem;">Full Name</label>
+                        <input type="text" id="b-nama" required placeholder="Enter your name"
+                            style="width: 100%; padding: 1rem; border: 1px solid #ddd; border-radius: 10px; font-family: inherit;">
+                    </div>
+                    <div>
+                        <label style="font-weight: 600; display: block; margin-bottom: 0.5rem;">Select Service</label>
+                        <select id="b-layanan" required
+                            style="width: 100%; padding: 1rem; border: 1px solid #ddd; border-radius: 10px; font-family: inherit; background: white;">
+                            <option value="" disabled selected>Choose a service</option>
+                            <option value="Hair Styling & Color">Hair Styling & Color</option>
+                            <option value="Flawless Makeup">Flawless Makeup</option>
+                            <option value="Nail Art">Nail Art</option>
+                            <option value="Lash Extension">Lash Extension</option>
+                        </select>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div>
+                            <label style="font-weight: 600; display: block; margin-bottom: 0.5rem;">Date</label>
+                            <input type="date" id="b-tanggal" required
+                                style="width: 100%; padding: 1rem; border: 1px solid #ddd; border-radius: 10px; font-family: inherit;">
+                        </div>
+                        <div>
+                            <label style="font-weight: 600; display: block; margin-bottom: 0.5rem;">Time</label>
+                            <input type="time" id="b-jam" required
+                                style="width: 100%; padding: 1rem; border: 1px solid #ddd; border-radius: 10px; font-family: inherit;">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary"
+                        style="margin-top: 1rem; width: 100%; font-size: 1.1rem; padding: 1rem; background: var(--primary);">Book
+                        via WhatsApp</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-glam">
+        <div class="container">
+            <div class="footer-glam-inner">
+                <h3 style="color: var(--secondary); font-size: 2.5rem; font-family: var(--font-heading); margin: 0;">
+                    Athaya Glamour</h3>
+                <p style="font-size: 1.1rem; line-height: 1.8; color: #e2d3d8;">Unleash your inner glamour with top-tier
+                    beauty services. Let our experts craft a look that leaves a lasting impression.</p>
+                <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem;">
+                    <div><i class="fas fa-map-marker-alt"
+                            style="color: var(--secondary); margin-right: 0.5rem;"></i>Grand Indonesia Mall, Level 3
+                    </div>
+                    <div><i class="fas fa-phone-alt" style="color: var(--secondary); margin-right: 0.5rem;"></i>+62 812
+                        8341 650</div>
+                    <div><i class="fas fa-envelope"
+                            style="color: var(--secondary); margin-right: 0.5rem;"></i>hello@athayaglamour.com</div>
+                    <div><i class="fas fa-clock" style="color: var(--secondary); margin-right: 0.5rem;"></i>Everyday
+                        10:00 AM - 10:00 PM</div>
+                </div>
+            </div>
+            <div
+                style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; font-size: 0.9rem; color: #a48e95;">
+                <p>&copy; 2026 Athaya Glamour. Created by Salon Web Pro.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WA -->
+    <a href="https://wa.me/628128341650?text=Halo" class="floating-wa"
+        style="background-color: var(--primary); box-shadow: 0 4px 15px rgba(212, 26, 92, 0.4);"><i
+            class="fab fa-whatsapp"></i> Chat kami</a>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('booking-form')?.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var nama = document.getElementById('b-nama').value;
+            var layanan = document.getElementById('b-layanan').value;
+            var tanggal = document.getElementById('b-tanggal').value;
+            var jam = document.getElementById('b-jam').value;
+
+            var text = 'Hello Admin, I would like to book an appointment.\n\n';
+            text += 'Name: ' + nama + '\n';
+            text += 'Service: ' + layanan + '\n';
+            text += 'Date: ' + tanggal + '\n';
+            text += 'Time: ' + jam + '\n\n';
+            text += 'Thank you!';
+
+            var waUrl = 'https://wa.me/628128341650?text=' + encodeURIComponent(text);
+            window.open(waUrl, '_blank');
+        });
+    </script>
+</body>
+
+</html>
