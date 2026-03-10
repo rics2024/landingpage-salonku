@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soul Shines | Modern Salon Landing Page</title>
+
+    <!-- Styles & Icons -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* Soul Shines Specific Styles */
+        body.theme-seoul-shine {
+            --primary: #111111;
+            --secondary: #fae8e8;
+            --light: #fafafa;
+            --white: #ffffff;
+            --dark: #111111;
+            --text-main: #555555;
+            --font-heading: 'Outfit', sans-serif;
+            background-color: #ffffff;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .theme-seoul-shine .navbar {
+            background: #ffffff;
+            box-shadow: none;
+            padding: 1.5rem 5%;
+            top: 40px;
+            /* Offset for demo return bar */
+        }
+
+        .theme-seoul-shine .nav-logo {
+            color: #111111;
+            font-weight: 400;
+            letter-spacing: -1px;
+            font-size: 1.5rem;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .theme-seoul-shine .nav-links a {
+            font-weight: 400;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #555;
+        }
+
+        .theme-seoul-shine .nav-actions .btn-book {
+            background: #111111;
+            color: #ffffff;
+            border-radius: 50px;
+            padding: 0.6rem 1.8rem;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .theme-seoul-shine .nav-actions .btn-book:hover {
+            background: #333333;
+        }
+
+        .theme-seoul-shine .hero {
+            background: #ffffff;
+            padding: 12rem 5% 6rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+            min-height: 85vh;
+            gap: 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .theme-seoul-shine .hero::after {
+            display: none;
+        }
+
+        .theme-seoul-shine .hero-content {
+            flex: 1;
+            max-width: 500px;
+            margin: 0;
+        }
+
+        .theme-seoul-shine .hero-title {
+            font-size: 4rem;
+            font-weight: 300;
+            color: #111;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            letter-spacing: -1.5px;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .theme-seoul-shine .hero-title span {
+            background: none;
+            -webkit-text-fill-color: #111;
+            display: block;
+        }
+
+        .theme-seoul-shine .hero-subtitle {
+            font-size: 0.95rem;
+            color: #777;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            max-width: 400px;
+            margin-left: 0;
+            line-height: 1.6;
+        }
+
+        .theme-seoul-shine .btn-pink {
+            background: #fdf0f0;
+            color: #111;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .theme-seoul-shine .btn-pink:hover {
+            background: #f7e0e0;
+        }
+
+        .theme-seoul-shine .hero-image {
+            flex: 1.2;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        .theme-seoul-shine .hero-image img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .theme-seoul-shine .services-section {
+            background: #fafafa;
+            padding: 6rem 5%;
+        }
+
+        .theme-seoul-shine .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .theme-seoul-shine .service-card {
+            background: #fff;
+            padding: 3.5rem 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
+            border: none;
+        }
+
+        .theme-seoul-shine .service-icon {
+            font-size: 1.8rem;
+            color: #111;
+            margin-bottom: 1.5rem;
+            height: 60px;
+            width: 60px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .theme-seoul-shine .service-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            font-family: 'Outfit', sans-serif;
+            color: #111;
+        }
+
+        .theme-seoul-shine .service-card p {
+            font-size: 0.85rem;
+            color: #777;
+            line-height: 1.6;
+        }
+
+        .theme-seoul-shine .gallery-section {
+            padding: 6rem 5%;
+            background: #ffffff;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .theme-seoul-shine .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .theme-seoul-shine .gallery-col {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .theme-seoul-shine .gallery-grid img {
+            width: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .theme-seoul-shine .about-section {
+            padding: 6rem 5%;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 5rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .theme-seoul-shine .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        .theme-seoul-shine .about-content {
+            flex: 1;
+        }
+
+        .theme-seoul-shine .about-content h2 {
+            font-size: 2.8rem;
+            font-weight: 300;
+            line-height: 1.2;
+            margin-bottom: 2rem;
+            color: #111;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .theme-seoul-shine .about-content h2 span {
+            display: block;
+        }
+
+        .theme-seoul-shine .about-content p {
+            color: #777;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .theme-seoul-shine .testimonials-section {
+            background: #fafafa;
+            padding: 7rem 5%;
+        }
+
+        .theme-seoul-shine .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 900px;
+            margin: 3rem auto 0;
+        }
+
+        .theme-seoul-shine .testi-card {
+            background: #ffffff;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
+            border: none;
+        }
+
+        .theme-seoul-shine .stars {
+            color: #f5c518;
+            margin-bottom: 1.5rem;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+        }
+
+        .theme-seoul-shine .testi-card p {
+            font-style: normal;
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .theme-seoul-shine .testi-author {
+            font-weight: 600;
+            color: #111;
+            font-size: 0.9rem;
+        }
+
+        .theme-seoul-shine .testi-role {
+            font-size: 0.8rem;
+            color: #999;
+            margin-top: 0.2rem;
+        }
+
+        .theme-seoul-shine .contact-section {
+            padding: 6rem 5%;
+            background: #ffffff;
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            gap: 5rem;
+        }
+
+        .theme-seoul-shine .contact-info {
+            flex: 1;
+        }
+
+        .theme-seoul-shine .contact-info h2 {
+            font-weight: 300;
+            font-size: 2.2rem;
+            margin-bottom: 2.5rem;
+            color: #111;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .theme-seoul-shine .info-block {
+            margin-bottom: 2rem;
+        }
+
+        .theme-seoul-shine .info-block h4 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #111;
+        }
+
+        .theme-seoul-shine .info-block p {
+            font-size: 0.85rem;
+            color: #777;
+            line-height: 1.6;
+        }
+
+        .theme-seoul-shine .map-container {
+            flex: 2;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 350px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+        }
+
+        .theme-seoul-shine .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .theme-seoul-shine .footer {
+            background: #333333;
+            color: #ffffff;
+            padding: 2.5rem 5%;
+            text-align: center;
+        }
+
+        .theme-seoul-shine .footer p {
+            font-size: 0.85rem;
+            color: #aaa;
+            margin: 0;
+        }
+
+        .theme-seoul-shine .section-title {
+            font-weight: 300;
+            font-size: 2.2rem;
+            color: #111;
+            text-align: center;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        /* Floating WA Override */
+        .theme-seoul-shine .floating-wa {
+            background-color: #25D366;
+            color: #fff;
+            padding: 0.6rem 1.2rem;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .theme-seoul-shine .reservation-section {
+            padding: 8rem 5%;
+            background: #fdf0f0;
+            text-align: center;
+        }
+
+        .theme-seoul-shine .reservation-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .theme-seoul-shine .reservation-content h2 {
+            font-size: 2.8rem;
+            font-weight: 300;
+            color: #111;
+            margin-bottom: 1.5rem;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .theme-seoul-shine .reservation-content p {
+            color: #555;
+            font-size: 1.05rem;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+
+        .theme-seoul-shine .btn-dark {
+            background: #111111;
+            color: #ffffff;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+        }
+
+        .theme-seoul-shine .btn-dark:hover {
+            background: #333333;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .theme-seoul-shine .reservation-form {
+            background: #ffffff;
+            padding: 4rem;
+            border-radius: 10px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.03);
+            text-align: left;
+            margin-top: 3rem;
+            box-sizing: border-box;
+        }
+
+        .theme-seoul-shine .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .theme-seoul-shine .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            color: #111;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .theme-seoul-shine .form-group input,
+        .theme-seoul-shine .form-group select {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            background: #fafafa;
+            transition: all 0.3s;
+            box-sizing: border-box;
+        }
+
+        .theme-seoul-shine .form-group input:focus,
+        .theme-seoul-shine .form-group select:focus {
+            outline: none;
+            border-color: #111;
+            background: #fff;
+        }
+
+        .theme-seoul-shine .btn-submit {
+            width: 100%;
+            background: #111111;
+            color: #ffffff;
+            padding: 1rem;
+            border: none;
+            border-radius: 5px;
+            font-weight: 500;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: 'Inter', sans-serif;
+            margin-top: 1rem;
+        }
+
+        .theme-seoul-shine .btn-submit:hover {
+            background: #333333;
+        }
+
+        @media (max-width: 768px) {
+            .theme-seoul-shine .hero {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 8rem;
+                gap: 2rem;
+            }
+
+            .theme-seoul-shine .hero-subtitle {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .theme-seoul-shine .services-grid,
+            .theme-seoul-shine .gallery-grid,
+            .theme-seoul-shine .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .theme-seoul-shine .gallery-col {
+                gap: 1.5rem;
+            }
+
+            .theme-seoul-shine .about-section,
+            .theme-seoul-shine .contact-section {
+                flex-direction: column;
+                gap: 3rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="theme-seoul-shine">
+
+    <!-- Demo Return Bar -->
+    <div class="demo-return-bar">
+        <span style="color: #fff; font-size: 0.9rem;">Soul Shines Theme</span>
+        <a href="index.html" style="color: #94a3b8; text-decoration: none;"><i class="fas fa-arrow-left"></i> Kembali ke
+            Menu</a>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#" class="nav-logo" style="text-decoration: none;">
+            soul shines.
+        </a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#reservation">Reservation</a></li>
+        </ul>
+        <div class="nav-actions" style="justify-content: flex-end;">
+            <i class="fas fa-bars hamburger"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero reveal">
+        <div class="hero-content">
+            <h1 class="hero-title">Discover your <span>true radiance.</span></h1>
+            <p class="hero-subtitle">Premium salon & beauty treatments to elevate your natural charm.</p>
+            <a href="#reservation" class="btn-pink" style="text-decoration: none;">
+                Book Reservation
+            </a>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=800&fit=crop"
+                alt="Nail Polish Hands">
+        </div>
+    </section>
+
+    <!-- Promo Section -->
+    <section class="container reveal" style="padding: 2rem 5% 4rem; max-width: 1200px; margin: 0 auto;">
+        <div
+            style="background: #fafafa; border-radius: 10px; padding: 3rem; display: flex; align-items: center; gap: 3rem; border: 1px solid #eee; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 250px;">
+                <span
+                    style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: #777; font-weight: 500;">Special
+                    Offer</span>
+                <h2
+                    style="font-size: 2.2rem; font-weight: 300; color: #111; margin: 1rem 0; font-family: 'Outfit', sans-serif;">
+                    Seoul Signature Glow</h2>
+                <p style="color: #555; font-size: 0.95rem; line-height: 1.6; margin-bottom: 2rem;">Experience our most
+                    demanded service bundle. Combine Korean Hair Treatment + Hydrating Skin Care at an exclusive flat
+                    rate this month.</p>
+                <a href="#reservation" class="btn-pink" style="text-decoration: none;">Claim Promotion</a>
+            </div>
+            <div style="flex: 1; border-radius: 8px; overflow: hidden; min-width: 250px;">
+                <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=600&fit=crop"
+                    style="width: 100%; height: 250px; object-fit: cover;" alt="Glow Promo">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-image reveal">
+            <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=800&fit=crop"
+                alt="Facial Mask Avocado">
+        </div>
+        <div class="about-content reveal">
+            <h2>Elevating your <span>natural beauty.</span></h2>
+            <p>At Soul Shines, we believe that true beauty begins with healthy foundations. Our expert stylists and
+                therapists are dedicated to providing personalized routines and beauty techniques using premium Korean
+                products.</p>
+            <p>We've created a minimalist sanctuary where you can escape the noise and focus on self-care and finding
+                your inner glow. Experience modern treatments designed to bring out your natural radiance.</p>
+            <a href="#reservation" class="btn-pink" style="text-decoration: none;">Book Now</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <h2 class="section-title reveal">Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card reveal">
+                <div class="service-icon"><i class="fas fa-cut"></i></div>
+                <h3>Hair Styling</h3>
+                <p>Professional haircuts, styling, coloring and treatments to keep your hair healthy and beautiful.</p>
+            </div>
+            <div class="service-card reveal" style="transition-delay: 0.1s">
+                <div class="service-icon"><i class="fas fa-tint"></i></div>
+                <h3>Skin Care</h3>
+                <p>Rejuvenating facials and skincare routines tailored to your specific dermatological needs.</p>
+            </div>
+            <div class="service-card reveal" style="transition-delay: 0.2s">
+                <div class="service-icon"><i class="fas fa-hand-sparkles"></i></div>
+                <h3>Nail Studio</h3>
+                <p>Manicure, pedicure, gel polish, and artistic nail designs for elegant and healthy nails.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <h2 class="section-title reveal">Gallery</h2>
+        <div class="gallery-grid">
+            <div class="gallery-col reveal">
+                <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=800&fit=crop"
+                    alt="Hair Styling" style="height: 280px; object-fit: cover;">
+                <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=800&fit=crop"
+                    alt="Salon Interior" style="height: 280px; object-fit: cover;">
+            </div>
+            <div class="gallery-col reveal" style="transition-delay: 0.1s">
+                <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=800&fit=crop"
+                    alt="Blonde Hair" style="height: 280px; object-fit: cover;">
+                <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=800&fit=crop"
+                    alt="Salon Chair" style="height: 280px; object-fit: cover;">
+            </div>
+            <div class="gallery-col reveal" style="transition-delay: 0.2s">
+                <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=800&fit=crop"
+                    style="height: 100%; object-fit: cover;" alt="Beauty Product">
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <h2 class="section-title reveal">Client Stories</h2>
+        <div class="testimonials-grid">
+            <div class="testi-card reveal">
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"The team at Soul Shines completely transformed my complexion. Their targeted skin analysis and
+                    Korean skincare facial have left me with the glowing skin I've always dreamed of."</p>
+                <div class="testi-author">Amanda S.</div>
+                <div class="testi-role">Loyal Client</div>
+            </div>
+            <div class="testi-card reveal" style="transition-delay: 0.1s">
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"I've been trying out their signature Keratin C curl perm for years, and it's simply amazing! The
+                    salon atmosphere is so calming and the staffs are so attentive."</p>
+                <div class="testi-author">Sarah M.</div>
+                <div class="testi-role">Regular Patron</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-info reveal">
+            <h2>Visit Us</h2>
+
+            <div class="info-block">
+                <h4>Open Hours</h4>
+                <p>Mon - Sat: 10:00 AM - 08:00 PM<br>Sunday: Closed</p>
+            </div>
+
+            <div class="info-block">
+                <h4>Location</h4>
+                <p>123 Beauty Lane, 4th Floor<br>CA 90028, US</p>
+            </div>
+
+            <div class="info-block">
+                <h4>Contact</h4>
+                <p>+123 4567 890<br>hello@seoulshinebeauty.com</p>
+            </div>
+        </div>
+        <div class="map-container reveal">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15865.112109403561!2d106.82271635!3d-6.22698945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e5b61f22e7%3A0xe54c1dbce3fc2a!2sJakarta%20Selatan%2C%20Kota%20Jakarta%20Selatan%2C%20Daerah%20Khusus%20Ibukota%20Jakarta!5e0!3m2!1sid!2sid!4v1709187372134!5m2!1sid!2sid"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section id="reservation" class="reservation-section">
+        <div class="reservation-content reveal">
+            <h2>Book Your Visit</h2>
+            <p>Fill out the form below to secure your appointment. We will confirm your session via WhatsApp shortly.
+            </p>
+
+            <form class="reservation-form" id="bookingForm" onsubmit="return submitBooking(event)">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Select Service</label>
+                    <select id="service" required>
+                        <option value="" disabled selected>-- Choose a service --</option>
+                        <option value="Hair Styling">Hair Styling & Treatment</option>
+                        <option value="Skin Care">Skin Care & Facial</option>
+                        <option value="Nail Studio">Nail Studio (Mani/Pedi)</option>
+                        <option value="Complete Package">Complete Package (Hair, Skin & Nails)</option>
+                    </select>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                        <label for="date">Preferred Date</label>
+                        <input type="date" id="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Preferred Time</label>
+                        <select id="time" required>
+                            <option value="" disabled selected>-- Time --</option>
+                            <option value="10:00 AM">10:00 AM</option>
+                            <option value="12:00 PM">12:00 PM</option>
+                            <option value="02:00 PM">02:00 PM</option>
+                            <option value="04:00 PM">04:00 PM</option>
+                            <option value="06:00 PM">06:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit">Confirm via WhatsApp</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Soul Shines Beauty. All rights reserved.</p>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/628128341650?text=Halo%20Admin,%20saya%20mau%20reservasi%20salon" target="_blank"
+        class="floating-wa" style="text-decoration: none;">
+        <i class="fab fa-whatsapp"></i> Chat kami
+    </a>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        // Form Submission to WhatsApp
+        function submitBooking(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const service = document.getElementById('service').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+
+            // Format WhatsApp Message
+            const message = `Halo Admin Soul Shines!%0A%0ASaya ingin melakukan reservasi dengan detail berikut:%0A%0A*Nama:* ${name}%0A*Layanan:* ${service}%0A*Tanggal:* ${date}%0A*Jam:* ${time}%0A%0AMohon konfirmasinya ya. Terima kasih.`;
+
+            // Send to WhatsApp (Replace with Admin's number)
+            const waNumber = '628128341650';
+            const waLink = `https://wa.me/${waNumber}?text=${message}`;
+
+            window.open(waLink, '_blank');
+            return false;
+        }
+
+        // Specific script for Soul Shines navigation scrolling
+        document.querySelectorAll('.nav-links a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

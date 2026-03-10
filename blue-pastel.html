@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Pastel Theme - Klinik Kecantikan</title>
+    <meta name="description" content="Blue pastel minimal aesthetic clinic landing page.">
+    <meta name="keywords" content="blue pastel clinic, soft aesthetic beauty, modern skincare">
+    <link rel="canonical" href="https://salonwebpro.example.com/blue-pastel.html">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Blue Pastel - Demo Salon Web Pro">
+    <meta property="og:description" content="Soft and aesthetic blue pastel style clinic landing page.">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1200&h=630&auto=format&fit=crop">
+    <meta property="og:url" content="https://salonwebpro.example.com/blue-pastel.html">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Styles & Icons -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- JSON-LD LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BeautySalon",
+      "name": "Seoul Glow Clinic",
+      "image": "https://images.unsplash.com/photo-1560066984-138dadb4c035",
+      "telephone": "08128341650",
+      "priceRange": "$$$"
+    }
+    </script>
+    <style>
+        .testimonial-carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 2rem;
+            padding-bottom: 2rem;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            cursor: grab;
+        }
+
+        .testimonial-carousel::-webkit-scrollbar {
+            display: none;
+        }
+
+        .testimonial-carousel .testimonial-card {
+            flex: 0 0 100%;
+            scroll-snap-align: center;
+        }
+    </style>
+</head>
+
+<body class="theme-blue-pastel">
+
+    <div class="demo-return-bar" style="background: #e6f0fa; color: #436b95; border-bottom: 1px solid #c2dcf0;">
+        <span><i class="fas fa-eye"></i> Anda sedang melihat demo tema <strong>Blue Pastel</strong></span>
+        <a href="index.html"><i class="fas fa-arrow-left"></i> Kembali ke Beranda</a>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" style="top: 40px !important; box-shadow: none; border-bottom: 1px solid #eee;">
+        <a href="#" class="nav-logo" style="color: var(--dark);">
+            Seoul Glow
+        </a>
+        <ul class="nav-links">
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#services">Layanan</a></li>
+            <li><a href="#gallery">Klinik</a></li>
+            <li><a href="#testimonials">Review</a></li>
+            <li><a href="#booking">Reservasi</a></li>
+        </ul>
+        <div class="nav-actions">
+            <i class="fas fa-bars hamburger"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background: linear-gradient(135deg, #e6f0fa 0%, #ffffff 100%); min-height: 80vh;">
+        <div class="hero-content reveal">
+            <h1 class="hero-title" style="color: #436b95;"><span
+                    style="background:none;-webkit-text-fill-color:#436b95;">Radiant Clarity.</span></h1>
+            <p class="hero-subtitle" style="color: #5c84b1;">Perawatan sentuhan ahli dengan ketenangan estetika pastel
+                biru untuk mewujudkan kulit sehat bercahaya.</p>
+            <div class="hero-cta">
+                <a href="#booking" class="btn btn-primary"
+                    style="background: #6c9bc9; border-radius: 4px; box-shadow: 0 4px 15px rgba(108,155,201,0.3);">Reservasi
+                    Sekarang</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promo Section -->
+    <section class="container" style="padding-top: 3rem; padding-bottom: 2rem;">
+        <div class="reveal"
+            style="background: linear-gradient(135deg, #e6f0fa, #f7fbff); border-radius: 8px; border: 1px dashed #6c9bc9; padding: 2.5rem; text-align: center; box-shadow: 0 4px 15px rgba(108,155,201,0.1);">
+            <div
+                style="display: inline-block; background: #6c9bc9; color: white; padding: 0.3rem 1rem; border-radius: 50px; font-size: 0.85rem; font-weight: bold; margin-bottom: 1rem; letter-spacing: 1px;">
+                PROMO BULAN INI</div>
+            <h2 style="color: #436b95; margin-bottom: 1rem; font-size: 2rem;">Korea Glass Skin Package</h2>
+            <p
+                style="color: #5c84b1; margin-bottom: 1.5rem; max-width: 600px; margin-left: auto; margin-right: auto; font-size: 1.1rem;">
+                Dapatkan kulit cerah dan plumpy dengan paket kombinasi Pico Laser + Skin Booster. <br>Hanya <strong>Rp
+                    1.499.000</strong> (Normal <strike>Rp 2.500.000</strike>)</p>
+            <a href="#booking" class="btn"
+                style="background: white; color: #6c9bc9; border: 2px solid #6c9bc9; border-radius: 4px; box-shadow: none;">Klaim
+                Promo</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container" style="padding-bottom: 0;">
+        <div
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; align-items: center;">
+            <div class="reveal" style="text-align: left;">
+                <h2 class="section-title" style="text-align: left; margin-bottom: 1.5rem; color: #436b95;">Filosofi Kami
+                </h2>
+                <p style="color: var(--text-main); font-size: 1.1rem; line-height: 1.8;">Klinik kami mengedepankan
+                    suasana tenang dengan palet warna pastel biru (Blue Pastel) yang merelaksasi. Kami memadukan
+                    lingkungan damai dengan prosedur keindahan mutakhir.</p>
+                <p style="color: var(--text-main); font-size: 1.1rem; line-height: 1.8; margin-top: 1rem;">Tenangkan
+                    pikiran Anda sembari kami memugar kecantikan sempurna Anda lewat perawatan estetik yang aman dan
+                    efisien.</p>
+            </div>
+            <div class="reveal" style="transition-delay: 0.2s;">
+                <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=800&auto=format&fit=crop"
+                    alt="Blue Pastel Clinic"
+                    style="border-radius: 8px; width: 100%; border: 1px solid #e6f0fa; box-shadow: 0 10px 30px rgba(108, 155, 201, 0.1);">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="container text-center">
+        <h2 class="section-title reveal">Treatment Unggulan</h2>
+        <div class="features-grid">
+            <div class="feature-card reveal" style="border-radius: 4px; box-shadow:none; border:1px solid #eee;">
+                <div class="feature-icon" style="background: transparent; color: var(--dark);"><i
+                        class="fas fa-magic"></i></div>
+                <h3>Pico Laser</h3>
+                <p>Mengatasi flek, hiperpigmentasi, dan mencerahkan kulit secara instan.</p>
+            </div>
+            <div class="feature-card reveal"
+                style="border-radius: 4px; box-shadow:none; border:1px solid #eee; transition-delay: 0.1s">
+                <div class="feature-icon" style="background: transparent; color: var(--dark);"><i
+                        class="fas fa-syringe"></i></div>
+                <h3>Skin Booster</h3>
+                <p>Injeksi nutrisi premium untuk efek glass skin ala wanita Korea.</p>
+            </div>
+            <div class="feature-card reveal"
+                style="border-radius: 4px; box-shadow:none; border:1px solid #eee; transition-delay: 0.2s">
+                <div class="feature-icon" style="background: transparent; color: var(--dark);"><i
+                        class="fas fa-smile-beam"></i></div>
+                <h3>Face Contouring</h3>
+                <p>Membentuk V-Shape dengan filler dan botox standar estetika tinggi.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" style="background: #fafafa;">
+        <div class="container text-center">
+            <h2 class="section-title reveal">Fasilitas Klinik</h2>
+            <div class="themes-grid" style="margin-top: 2rem;">
+                <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=600&auto=format&fit=crop"
+                    style="border-radius: 4px; width: 100%;" class="reveal" alt="Clinic Lobby">
+                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=600&auto=format&fit=crop"
+                    style="border-radius: 4px; width: 100%;" class="reveal" alt="Treatment Room"
+                    style="transition-delay: 0.1s">
+                <img src="https://images.unsplash.com/photo-1551884831-bbf3cdc6469e?q=80&w=600&auto=format&fit=crop"
+                    style="border-radius: 4px; width: 100%;" class="reveal" alt="Tools" style="transition-delay: 0.2s">
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="container">
+        <h2 class="section-title reveal" style="color: #436b95;">Testimoni Pasien</h2>
+        <div class="testimonial-carousel">
+            <div class="testimonial-card reveal" style="border-radius: 4px; box-shadow:none; border:1px solid #e6f0fa;">
+                <div class="stars" style="color:#6c9bc9;">★★★★★</div>
+                <p class="testimonial-text">"Kliniknya sangat bersih, dokter ramah dan informatif. Hasil Pico Lasernya
+                    memuaskan banget."</p>
+                <div class="client-info">
+                    <div class="client-avatar" style="background: #e6f0fa; color: #436b95;">J</div>
+                    <div><strong>Jessica</strong></div>
+                </div>
+            </div>
+            <div class="testimonial-card reveal"
+                style="border-radius: 4px; box-shadow:none; border:1px solid #e6f0fa; transition-delay: 0.1s">
+                <div class="stars" style="color:#6c9bc9;">★★★★★</div>
+                <p class="testimonial-text">"Skin booster disini nggak kaleng-kaleng, kulit langsung plumpy dan glowing
+                    seharian!"</p>
+                <div class="client-info">
+                    <div class="client-avatar" style="background: #e6f0fa; color: #436b95;">M</div>
+                    <div><strong>Manda</strong></div>
+                </div>
+            </div>
+            <div class="testimonial-card reveal"
+                style="border-radius: 4px; box-shadow:none; border:1px solid #e6f0fa; transition-delay: 0.2s">
+                <div class="stars" style="color:#6c9bc9;">★★★★★</div>
+                <p class="testimonial-text">"Sangat suka dengan vibes biru pastelnya! Rasanya rileks sekali saat
+                    melakukan contour wajah. Thank you Seoul Glow!"</p>
+                <div class="client-info">
+                    <div class="client-avatar" style="background: #e6f0fa; color: #436b95;">C</div>
+                    <div><strong>Chintya</strong></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Booking Section -->
+    <section id="booking" class="container">
+        <div style="background-color: #f7fbff; border-radius: 8px; padding: 4rem 2rem; border: 1px solid #e6f0fa;">
+            <h2 class="section-title reveal" style="color: #436b95;">Pesan Layanan</h2>
+            <div class="reveal"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; text-align: left; margin-top: 3rem;">
+
+                <!-- Kiri: Alamat & Jam -->
+                <div
+                    style="background: white; padding: 2.5rem; border-radius: 8px; border: 1px solid #e6f0fa; box-shadow: 0 4px 15px rgba(108,155,201,0.05);">
+                    <h3
+                        style="color: #436b95; margin-bottom: 2rem; border-bottom: 2px solid #e6f0fa; padding-bottom: 0.5rem;">
+                        Lokasi Kami</h3>
+                    <div style="margin-bottom: 1.5rem;">
+                        <i class="fas fa-map-marker-alt" style="margin-right: 0.5rem; color: #6c9bc9;"></i>
+                        <span style="color: #555;">SCBD Sudirman, Pacific Place Lt. 2, Jakarta Selatan</span>
+                    </div>
+                    <div style="margin-bottom: 2rem;">
+                        <i class="fas fa-phone-alt" style="margin-right: 0.5rem; color: #6c9bc9;"></i>
+                        <span style="color: #555;">+62 812 8341 650</span>
+                    </div>
+
+                    <h3
+                        style="color: #436b95; margin-bottom: 1rem; border-bottom: 2px solid #e6f0fa; padding-bottom: 0.5rem;">
+                        Jam Operasional</h3>
+                    <ul style="list-style: none; padding: 0; color: #555;">
+                        <li style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;"><span>Senin -
+                                Jumat</span> <span>10:00 - 20:00</span></li>
+                        <li style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;"><span>Sabtu -
+                                Minggu</span> <span>10:00 - 21:00</span></li>
+                    </ul>
+                </div>
+
+                <!-- Kanan: Form -->
+                <div
+                    style="background: white; padding: 2.5rem; border-radius: 8px; border: 1px solid #e6f0fa; box-shadow: 0 4px 15px rgba(108,155,201,0.05);">
+                    <form id="booking-form" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <h3 style="color: #436b95; margin-bottom: 1rem;">Form Reservasi</h3>
+                        <div>
+                            <label style="font-weight: 600; display: block; margin-bottom: 0.5rem; color: #555;">Nama
+                                Lengkap</label>
+                            <input type="text" id="b-nama" required placeholder="Masukkan nama Anda"
+                                style="width: 100%; padding: 1rem; border: 1px solid #e6f0fa; border-radius: 4px; font-family: inherit;">
+                        </div>
+                        <div>
+                            <label style="font-weight: 600; display: block; margin-bottom: 0.5rem; color: #555;">Pilihan
+                                Treatment</label>
+                            <select id="b-layanan" required
+                                style="width: 100%; padding: 1rem; border: 1px solid #e6f0fa; border-radius: 4px; font-family: inherit; background: white;">
+                                <option value="" disabled selected>Pilih Treatment</option>
+                                <option value="Pico Laser">Pico Laser</option>
+                                <option value="Skin Booster">Skin Booster</option>
+                                <option value="Face Contouring">Face Contouring</option>
+                            </select>
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div>
+                                <label
+                                    style="font-weight: 600; display: block; margin-bottom: 0.5rem; color: #555;">Tanggal</label>
+                                <input type="date" id="b-tanggal" required
+                                    style="width: 100%; padding: 1rem; border: 1px solid #e6f0fa; border-radius: 4px; font-family: inherit;">
+                            </div>
+                            <div>
+                                <label
+                                    style="font-weight: 600; display: block; margin-bottom: 0.5rem; color: #555;">Jam</label>
+                                <input type="time" id="b-jam" required
+                                    style="width: 100%; padding: 1rem; border: 1px solid #e6f0fa; border-radius: 4px; font-family: inherit;">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary"
+                            style="margin-top: 1rem; width: 100%; font-size: 1.1rem; padding: 1rem; background: #6c9bc9; color: white; border: none; border-radius: 4px;">Kirim
+                            via WhatsApp</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer"
+        style="padding: 5rem 5% 2rem; background: #2c4663; text-align: left; border-top: 1px solid #1f344d;">
+        <div class="container"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
+            <div>
+                <h3 style="color: white; margin-bottom: 1.5rem; font-size: 1.5rem;">Seoul Glow Clinic</h3>
+                <p style="color: #c2dcf0; line-height: 1.8; font-size: 0.95rem;">Membawa inovasi kecantikan dengan
+                    sentuhan
+                    premium nuansa biru pastel yang elegan demi keindahan sejati Anda.</p>
+            </div>
+            <div>
+                <h4 style="color: white; margin-bottom: 1.5rem; font-size: 1.1rem;">Tautan Utama</h4>
+                <ul style="list-style: none; color: #c2dcf0; padding: 0;">
+                    <li style="margin-bottom: 0.8rem;"><a href="#about"
+                            style="color: #c2dcf0; text-decoration: none;">Tentang Kami</a></li>
+                    <li style="margin-bottom: 0.8rem;"><a href="#services"
+                            style="color: #c2dcf0; text-decoration: none;">Layanan Estetik</a></li>
+                    <li style="margin-bottom: 0.8rem;"><a href="#booking"
+                            style="color: #c2dcf0; text-decoration: none;">Booking Appointment</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="color: white; margin-bottom: 1.5rem; font-size: 1.1rem;">Hubungi Kami</h4>
+                <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                    <a href="#" style="color: #c2dcf0; font-size: 1.3rem;"><i class="fab fa-instagram"></i></a>
+                    <a href="#" style="color: #c2dcf0; font-size: 1.3rem;"><i class="fab fa-twitter"></i></a>
+                    <a href="#" style="color: #c2dcf0; font-size: 1.3rem;"><i class="fab fa-facebook-f"></i></a>
+                </div>
+                <p style="color: #c2dcf0; margin-top: 1.5rem; font-size: 0.9rem;">Email: hello@seoulglow.com</p>
+            </div>
+        </div>
+        <div
+            style="border-top: 1px solid #3a5c82; padding-top: 2rem; text-align: center; color: #8aabc9; font-size: 0.9rem;">
+            <p>&copy; 2026 Seoul Glow Clinic. Didesain dengan nuansa Blue Pastel oleh Salon Web Pro.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WA -->
+    <a href="https://wa.me/628128341650?text=Halo" class="floating-wa"
+        style="background-color: #6c9bc9; border: 2px solid white;"><i class="fab fa-whatsapp"></i> Chat kami</a>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('booking-form')?.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var nama = document.getElementById('b-nama').value;
+            var layanan = document.getElementById('b-layanan').value;
+            var tanggal = document.getElementById('b-tanggal').value;
+            var jam = document.getElementById('b-jam').value;
+
+            var text = 'Halo Admin Seoul Glow, saya ingin melakukan reservasi treatment.\n\n';
+            text += 'Nama: ' + nama + '\n';
+            text += 'Treatment: ' + layanan + '\n';
+            text += 'Tanggal: ' + tanggal + '\n';
+            text += 'Jam: ' + jam + '\n\n';
+            text += 'Mohon konfirmasi ketersediaannya. Terima kasih!';
+
+            var waUrl = 'https://wa.me/628128341650?text=' + encodeURIComponent(text);
+            window.open(waUrl, '_blank');
+        });
+
+        // Testimonial Auto Slider
+        document.addEventListener('DOMContentLoaded', function () {
+            var carousel = document.querySelector('.testimonial-carousel');
+            if (carousel) {
+                setInterval(function () {
+                    if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 10) {
+                        carousel.scrollTo({ left: 0, behavior: 'smooth' });
+                    } else {
+                        carousel.scrollBy({ left: carousel.clientWidth, behavior: 'smooth' });
+                    }
+                }, 3000);
+            }
+        });
+    </script>
+</body>
+
+</html>
