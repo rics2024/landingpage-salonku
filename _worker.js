@@ -8,30 +8,27 @@ export default {
       "www.salonku.biz.id",
     ]);
 
-    // 1) DOMAIN UTAMA
-    // - /              -> /index.html
-    // - /templates/... -> biarkan jalan untuk preview
-    // - /style.css     -> biarkan jalan
-    // - /script.js     -> biarkan jalan
+    // DOMAIN UTAMA
     if (apexHosts.has(host)) {
+      // homepage utama
       if (url.pathname === "/" || url.pathname === "") {
         url.pathname = "/index.html";
       }
 
+      // preview templates dan asset root harus tetap normal
       return env.ASSETS.fetch(new Request(url.toString(), request));
     }
 
-    // 2) SUBDOMAIN CLIENT
-    // misal athaya.salonku.biz.id -> /clients/athaya/index.html
+    // SUBDOMAIN CLIENT
     const parts = host.split(".");
     const subdomain = parts[0];
 
-    // shared assets harus tetap bisa diakses
-    const sharedPaths = [
+    // file bersama yang harus tetap diambil dari root
+    const sharedExact = new Set([
       "/style.css",
       "/script.js",
       "/favicon.ico",
-    ];
+    ]);
 
     const sharedPrefixes = [
       "/assets/",
@@ -40,13 +37,13 @@ export default {
     ];
 
     if (
-      sharedPaths.includes(url.pathname) ||
+      sharedExact.has(url.pathname) ||
       sharedPrefixes.some((prefix) => url.pathname.startsWith(prefix))
     ) {
       return env.ASSETS.fetch(new Request(url.toString(), request));
     }
 
-    // homepage subdomain -> file client
+    // homepage subdomain -> clients/{subdomain}/index.html
     if (url.pathname === "/" || url.pathname === "/index.html") {
       const clientUrl = new URL(request.url);
       clientUrl.pathname = `/clients/${subdomain}/index.html`;
@@ -55,7 +52,7 @@ export default {
         new Request(clientUrl.toString(), request)
       );
 
-      // kalau client belum ada, lempar ke homepage utama
+      // kalau folder client belum ada, balikin ke homepage utama
       if (response.status === 404) {
         return Response.redirect("https://salonku.biz.id", 302);
       }
@@ -63,7 +60,7 @@ export default {
       return response;
     }
 
-    // selain itu, coba serve apa adanya
+    // path lain di subdomain: coba ambil apa adanya
     return env.ASSETS.fetch(new Request(url.toString(), request));
   },
 };
