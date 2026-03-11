@@ -469,6 +469,14 @@ section {
     margin-bottom: 1rem;
 }
 
+.pricing-subtitle {
+    color: var(--primary);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
 .pricing-price {
     font-size: 3.5rem;
     font-weight: 800;
@@ -846,4 +854,5 @@ body.theme-monochrome .feature-card {
     #why .features-grid {
         grid-template-columns: 1fr;
     }
+
 }
