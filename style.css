@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap');
 
 :root {
-    /* Salon Web Pro Brand Colors - Blue Pastel, Soft Pastel, Monochrome */
-    --primary: #a8c0d8;
-    /* Pastel Blue */
-    --primary-dark: #8aa6c4;
-    --primary-light: #cbdceb;
-    --secondary: #d4cfcc;
-    /* Soft Monochrome */
-    --dark: #334155;
-    --darker: #1e293b;
+    /* Salon Web Pro Brand Colors */
+    --primary: #6366f1;
+    /* Indigo */
+    --primary-dark: #4f46e5;
+    --primary-light: #818cf8;
+    --secondary: #ec4899;
+    /* Pink */
+    --dark: #0f172a;
+    --darker: #020617;
     --light: #f8fafc;
     --white: #ffffff;
     --text-main: #334155;
@@ -220,20 +220,9 @@ section {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: url('images/hero_bg.png') center/cover no-repeat;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(236, 72, 153, 0.05) 100%);
     position: relative;
     overflow: hidden;
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(248, 250, 252, 0.85); /* Soft overlay for text readability */
-    z-index: 0;
 }
 
 .hero::after {
@@ -243,14 +232,12 @@ section {
     right: -10%;
     width: 800px;
     height: 800px;
-    background: radial-gradient(circle, rgba(168, 192, 216, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
     border-radius: 50%;
-    z-index: 0;
+    z-index: -1;
 }
 
 .hero-content {
-    position: relative;
-    z-index: 1;
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
@@ -485,7 +472,7 @@ section {
     left: 10%;
     width: 80%;
     height: 6px;
-    background: linear-gradient(90deg, #8aa6c4, #e2e8f0, #a8c0d8);
+    background: linear-gradient(90deg, #5b5ff7, #d94fd8, #f05286);
     border-radius: 0 0 10px 10px;
 }
 
@@ -495,12 +482,12 @@ section {
     left: 0;
     width: 100%;
     height: 8px;
-    background: linear-gradient(90deg, #8aa6c4, #cbdceb, #a8c0d8);
+    background: linear-gradient(90deg, #5b5ff7, #ca43cd, #f64a8a);
     border-radius: 8px 8px 0 0;
 }
 
 .pricing-badge-text {
-    color: var(--primary);
+    color: #6366f1;
     font-size: 1.05rem;
     font-weight: 800;
     text-transform: uppercase;
@@ -510,7 +497,7 @@ section {
 }
 
 .pricing-subtitle {
-    color: var(--primary);
+    color: #6366f1;
     font-size: 1.05rem;
     font-weight: 800;
     text-transform: uppercase;
@@ -544,7 +531,7 @@ section {
     margin-bottom: 2.5rem;
     font-weight: 800;
     font-family: var(--font-heading);
-    background: linear-gradient(90deg, #8aa6c4, #cbdceb, #a8c0d8);
+    background: linear-gradient(90deg, #ec4899, #818cf8, #6366f1);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -577,7 +564,7 @@ section {
 }
 
 .pricing-btn {
-    background: var(--primary);
+    background: #6f78f6;
     color: white;
     width: 100%;
     font-size: 1.1rem;
@@ -585,14 +572,14 @@ section {
     padding: 1.2rem;
     border-radius: 50px;
     border: none;
-    box-shadow: 0 8px 20px rgba(168, 192, 216, 0.3);
+    box-shadow: 0 8px 20px rgba(111, 120, 246, 0.3);
     transition: all 0.3s ease;
 }
 
 .pricing-btn:hover {
-    background: var(--primary-dark);
+    background: #5b64e5;
     color: white;
-    box-shadow: 0 10px 25px rgba(168, 192, 216, 0.4);
+    box-shadow: 0 10px 25px rgba(111, 120, 246, 0.4);
     transform: translateY(-2px);
 }
 
